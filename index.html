@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apoorva Anurag | Fintech Data Engineer</title>
+  <meta name="description" content="Portfolio of Apoorva Anurag, Senior Associate Data Engineer specializing in distributed PySpark pipelines, AWS datalake designs, and real-time financial reconciliation engines.">
+  <meta name="author" content="Apoorva Anurag">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Live Canvas Background Wrapper -->
+  <div id="canvas-container">
+    <canvas id="bg-canvas"></canvas>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header id="main-header">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <i data-lucide="database"></i>
+        APOORVA <span>ANURAG</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <i data-lucide="menu"></i>
+      </button>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#metrics">Impact</a></li>
+          <li><a href="#etl-sandbox">ETL Sandbox</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-tag">
+            <span class="pulse"></span>
+            Data Engineer II
+          </div>
+          <h1 class="hero-title">
+            Architecting High-Scale <br>
+            <span class="text-gradient-cyan">Financial Data</span> Pipelines
+          </h1>
+          <p class="hero-subtitle">
+            I am a Data Engineer II with 3 years of experience building production-grade distributed data pipelines at a fintech NBFC. I specialize in end-to-end ETL/ELT pipelines, datalake architectures, large-scale entity resolution, and LLM-powered ingestion workflows.
+          </p>
+          <div class="cta-group">
+            <a href="#etl-sandbox" class="btn btn-primary">
+              <i data-lucide="play-circle"></i>
+              Run ETL Simulator
+            </a>
+            <a href="resume.pdf" class="btn btn-secondary" download="Apoorva_Anurag_Resume.pdf">
+              <i data-lucide="download"></i>
+              Download Resume
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="architecture-preview">
+            <div class="arch-node highlight">
+              <i data-lucide="database" style="color: var(--accent-cyan);"></i>
+              <div>Raw Data Ingestion</div>
+            </div>
+            <div class="arch-line"></div>
+            <div class="arch-node">
+              <i data-lucide="cpu" style="color: var(--accent-purple);"></i>
+              <div>PySpark ETL (Databricks)</div>
+            </div>
+            <div class="arch-line"></div>
+            <div class="arch-node highlight">
+              <i data-lucide="shield-check" style="color: var(--accent-green);"></i>
+              <div>AWS Datalake (SCD Type 2)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINTECH METRICS DASHBOARD -->
+  <section id="metrics" class="metrics">
+    <div class="container">
+      <div class="section-header reveal" style="text-align: center; margin: 0 auto 4rem;">
+        <span class="section-label">Quantified Impact</span>
+        <h2 class="section-title">Data Infrastructure in Numbers</h2>
+        <p class="section-subtitle">Key metrics from production deployments reflecting scalability and operational cost-savings.</p>
+      </div>
+      <div class="metrics-grid">
+        <div class="metric-card reveal">
+          <div class="metric-num text-gradient-cyan">₹10K Cr+</div>
+          <div class="metric-desc">Portfolio AUM Processed Daily</div>
+        </div>
+        <div class="metric-card reveal">
+          <div class="metric-num text-gradient-green">13M+</div>
+          <div class="metric-desc">Borrower Records Deduplicated</div>
+        </div>
+        <div class="metric-card reveal">
+          <div class="metric-num text-gradient-purple">₹80L+</div>
+          <div class="metric-desc">Monthly Selldown Value Unlocked</div>
+        </div>
+        <div class="metric-card reveal">
+          <div class="metric-num text-gradient-cyan">72+ Hrs</div>
+          <div class="metric-desc">Manual Labor Saved per Cycle</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE ETL SANDBOX -->
+  <section id="etl-sandbox" class="etl-sandbox">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Interactive Demo</span>
+        <h2 class="section-title">ETL Pipeline Sandbox</h2>
+        <p class="section-subtitle">Interact with simulations of the primary pipelines I have architected. Select a pipeline and run the flow to see real-time visualization and log execution.</p>
+      </div>
+      
+      <div class="etl-box reveal">
+        <!-- Tabs -->
+        <div class="etl-tabs">
+          <button class="etl-tab-btn active" data-pipeline="colending">Colending Platform</button>
+          <button class="etl-tab-btn" data-pipeline="ucic">UCIC Deduplication</button>
+          <button class="etl-tab-btn" data-pipeline="onepos">OnePOS Reconciliation</button>
+          <button class="etl-tab-btn" data-pipeline="llm">LLM Ingestion Pipeline</button>
+        </div>
+        
+        <div class="etl-content">
+          <!-- Metadata and control panel -->
+          <div class="etl-meta">
+            <h3 id="pipeline-title">Colending Data Platform</h3>
+            <p id="pipeline-desc">Architected PySpark pipelines on Databricks processing 30,000+ daily borrower records across a Rs.10,000Cr AUM portfolio. This system replaced manual vendor-dependent workflows with unified SQL-queryable analytics.</p>
+            
+            <div class="etl-metrics">
+              <div class="etl-sub-metric">
+                <span class="label">Throughput</span>
+                <span class="val" id="pipeline-throughput">30k/day</span>
+              </div>
+              <div class="etl-sub-metric">
+                <span class="label">Impact</span>
+                <span class="val" id="pipeline-impact">₹80L/mo value</span>
+              </div>
+            </div>
+            
+            <button class="btn btn-primary" id="run-pipeline-btn">
+              <i data-lucide="play"></i>
+              Run Pipeline
+            </button>
+          </div>
+          
+          <!-- Visualizer & Console -->
+          <div class="etl-visualizer">
+            <div class="pipeline-flow">
+              <div class="flow-node" id="node-extract">
+                <i data-lucide="download-cloud"></i>
+                <span>Extract</span>
+              </div>
+              <div class="flow-line" id="line-extract-transform"></div>
+              <div class="flow-node" id="node-transform">
+                <i data-lucide="git-merge"></i>
+                <span>Transform</span>
+              </div>
+              <div class="flow-line" id="line-transform-load"></div>
+              <div class="flow-node" id="node-load">
+                <i data-lucide="database"></i>
+                <span>Load</span>
+              </div>
+            </div>
+            
+            <div class="console-panel">
+              <div class="console-header">
+                <span>terminal_output.sh</span>
+                <div class="console-dots">
+                  <span class="console-dot"></span>
+                  <span class="console-dot"></span>
+                  <span class="console-dot"></span>
+                </div>
+              </div>
+              <div class="console-body" id="console-logs">
+                <div class="console-log info">System idle. Select a pipeline tab and click "Run Pipeline" to begin.</div>
+                <div class="console-input-line">$ <span class="cursor"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK EXPERIENCE -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Professional Path</span>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-subtitle">Proven track record of designing robust pipelines, optimizing queries, and supporting analytical operations.</p>
+      </div>
+      
+      <div class="timeline">
+        <!-- Job 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="job-title">Senior Associate - Data Engineering</h3>
+              <div class="company">Vivriti Capital Limited</div>
+            </div>
+            <div class="job-duration">Jul 2023 – May 2026</div>
+          </div>
+          <ul class="job-details">
+            <li><strong>Colending Data Platform:</strong> Architected end-to-end PySpark pipelines on Databricks processing 30,000+ daily borrower records across a Rs.10,000Cr AUM portfolio. Replaced manual Excel reports with a unified analytical layer, unlocking Rs.80L+ in monthly selldown value across 2 pools.</li>
+            <li><strong>Cloud Migration &amp; Cost Optimization:</strong> Migrated computation workloads from Amazon S3/Redshift to EMR-on-EKS Spark, and ultimately to Databricks (PySpark) to secure runtime stability, **saving 75% in total compute costs**.</li>
+            <li><strong>Data Modeling &amp; Schema Design:</strong> Designed AWS datalake with SCD Type 2 historization for full point-in-time reconstructability. Implemented star and dimensional schema data modeling to support reliable lending and compliance reporting.</li>
+            <li><strong>Data Validation Framework:</strong> Built a PySpark validation framework with 10+ checks for the weekly loanbook pipeline (enforcing ID uniqueness, schema integrity, and disbursement reconciliation). Caught critical schema mismatches in selldown files, preventing incorrect loanbook publication. Integrated Microsoft Teams alert triggers.</li>
+            <li><strong>UCIC Borrower Identification:</strong> Built an RBI-compliant entity resolution engine in PySpark deduplicating 13M+ borrower records via deterministic and fuzzy matching. Tuned Spark execution plans and partition strategies for optimized distributed scaling.</li>
+            <li><strong>OnePOS Reconciliation:</strong> Automated ledger-to-statement reconciliations via PySpark and optimized SQL queries, leveraging performance tuning for large dataset joins to eliminate manual workflows and save 72+ man-hours per cycle.</li>
+            <li><strong>LLM-Powered Ingestion:</strong> Designed and deployed a GPT-powered schema standardization pipeline for 30+ monthly collection reports with inconsistent structures, auto-flagging low-confidence outputs, and logging all mapping decisions for auditability.</li>
+            <li><strong>Workflow Orchestration &amp; DevOps:</strong> Orchestrated batch workflows using Apache Airflow DAGs with dependency/SLA management. Applied CI/CD pipelines and Git-based version control with code reviews and testing practices.</li>
+          </ul>
+        </div>
+        
+        <!-- Job 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="job-title">Quantitative Analyst Intern</h3>
+              <div class="company">Investmint</div>
+            </div>
+            <div class="job-duration">Jun 2022 – Aug 2022</div>
+          </div>
+          <ul class="job-details">
+            <li>Built a modular backtesting framework in Python for equities, fixed income, and commodities, executing 1,000+ backtests across varied parameters.</li>
+            <li>Collaborated with quantitative research teams to optimize trading models and apply walk-forward analysis, resulting in a 12% improvement in the Sharpe ratio.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Selected Works</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Systems designed and built independently, applying advanced analytics and AI technologies.</p>
+      </div>
+      
+      <div class="pub-card reveal" style="display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; width: 100%; align-items: center; flex-wrap: wrap; gap: 1.25rem;">
+          <h3 style="font-size: 1.6rem; margin: 0;">Credit Document Intelligence Pipeline</h3>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="skill-tag" style="background: rgba(192, 132, 252, 0.08); border-color: var(--accent-purple); color: var(--accent-purple);">RAG</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">OpenAI</span>
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">ChromaDB</span>
+          </div>
+        </div>
+        <p class="pub-abstract" style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
+          Built a production-grade Retrieval-Augmented Generation (RAG) pipeline ingesting RBI compliance circulars and internal credit policy PDFs. The system handles document parsing, chunks and embeds texts via OpenAI's <code>text-embedding-3-small</code> model, indexes vector representations in ChromaDB, and resolves natural language compliance queries with high-precision source citations. Designed to support scalable automated auditing in lending operations.
+        </p>
+        <a href="https://github.com/apoorvaanurag" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.85rem;">
+          <i data-lucide="github"></i>
+          View Repository
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL SKILLS -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header reveal" style="text-align: center; margin: 0 auto 4rem;">
+        <span class="section-label">Toolkit</span>
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-subtitle">Proficient in big data computations, database structures, and modern engineering practices.</p>
+      </div>
+      
+      <div class="skills-grid">
+        <!-- Programming -->
+        <div class="skills-card reveal">
+          <h3><i data-lucide="code"></i> Languages</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Python (OOP)</span>
+            <span class="skill-tag">PySpark</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Shell Scripting</span>
+          </div>
+        </div>
+        
+        <!-- Big Data -->
+        <div class="skills-card reveal">
+          <h3><i data-lucide="server"></i> Distributed Computing</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Apache Spark</span>
+            <span class="skill-tag">Databricks</span>
+            <span class="skill-tag">AWS EMR</span>
+            <span class="skill-tag">GCP Dataproc</span>
+            <span class="skill-tag">Distributed Data Processing</span>
+          </div>
+        </div>
+        
+        <!-- Data Warehousing -->
+        <div class="skills-card reveal">
+          <h3><i data-lucide="database"></i> Data Warehousing &amp; Orchestration</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Redshift</span>
+            <span class="skill-tag">Snowflake</span>
+            <span class="skill-tag">Schema Design (Star/Snowflake)</span>
+            <span class="skill-tag">Apache Airflow</span>
+            <span class="skill-tag">ETL/ELT Pipeline Design</span>
+            <span class="skill-tag">Workflow Scheduling</span>
+          </div>
+        </div>
+        
+        <!-- DevOps -->
+        <div class="skills-card reveal">
+          <h3><i data-lucide="shield-check"></i> Quality &amp; DevOps</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Jenkins</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">CI/CD Pipelines</span>
+            <span class="skill-tag">Data Quality Frameworks</span>
+            <span class="skill-tag">Unit Testing</span>
+            <span class="skill-tag">Audit Logging</span>
+          </div>
+        </div>
+        
+        <!-- AI / LLM -->
+        <div class="skills-card reveal">
+          <h3><i data-lucide="cpu"></i> AI &amp; LLM</h3>
+          <div class="skills-list">
+            <span class="skill-tag">GPT-4</span>
+            <span class="skill-tag">OpenAI API</span>
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">ChromaDB</span>
+            <span class="skill-tag">RAG Pipeline Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH & PUBLICATIONS -->
+  <section id="publications" class="publications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Academic Contribution</span>
+        <h2 class="section-title">Research & Publications</h2>
+        <p class="section-subtitle">Translating advanced algorithms into practical applications, validated by peer review.</p>
+      </div>
+      
+      <div class="pub-card reveal">
+        <div class="pub-badge">
+          <i data-lucide="award"></i>
+          <div class="venue">IEEE - ICCCNT</div>
+          <span class="year">2023</span>
+        </div>
+        <div class="pub-info">
+          <h3>Real-Time Web Application to Classify Diabetic Foot Ulcer</h3>
+          <div class="pub-authors">
+            Souhrid Nandi, <span class="me">Apoorva Anurag</span>, Veena Mayya, Jayakumar Jeganathan
+          </div>
+          <p class="pub-abstract">
+            This research presents a real-time web application using an ensemble of deep neural networks to classify foot ulcer images into infection, ischaemia, both, or none. By providing immediate automated diagnosis, this system helps patients and clinics identify complications early, mitigating amputation risks.
+          </p>
+          <a href="https://ieeexplore.ieee.org" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <i data-lucide="external-link"></i>
+            View on IEEE Xplore
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CREDENTIALS -->
+  <section id="education" class="education">
+    <div class="container">
+      <div class="edu-cert-grid">
+        <!-- Education -->
+        <div class="edu-card reveal">
+          <h3><i data-lucide="graduation-cap"></i> Education</h3>
+          <div class="edu-item">
+            <div>
+              <h4 class="edu-major">B.Tech in Computers & Communication Engineering</h4>
+              <div class="edu-school">Manipal Institute of Technology, Karnataka</div>
+            </div>
+            <div class="edu-meta">
+              <div class="year">2019 – 2023</div>
+              <div class="gpa">CGPA: 7.55 / 10.0</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Certifications -->
+        <div class="cert-card reveal">
+          <h3><i data-lucide="shield-check"></i> Certifications</h3>
+          <div class="cert-item">
+            <div class="cert-icon">
+              <i data-lucide="cloud"></i>
+            </div>
+            <div>
+              <div class="cert-name">Solutions Architect – Associate</div>
+              <div class="cert-issuer">Amazon Web Services (AWS)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Connect</span>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">Let's discuss data architecture, cloud workflows, or potential collaborations.</p>
+      </div>
+      
+      <div class="contact-grid">
+        <!-- Details -->
+        <div class="contact-info reveal">
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i data-lucide="mail"></i>
+            </div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value"><a href="mailto:apoorvagk27@gmail.com">apoorvagk27@gmail.com</a></div>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value"><a href="https://linkedin.com/in/apoorvaanurag" target="_blank" rel="noopener noreferrer">linkedin.com/in/apoorvaanurag</a></div>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <div>
+              <div class="contact-label">Location</div>
+              <div class="contact-value">Bengaluru, India</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <form class="contact-form reveal" id="contact-form">
+          <div class="form-group">
+            <label for="form-name">Name</label>
+            <input type="text" id="form-name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="form-email">Email</label>
+            <input type="email" id="form-email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="form-message">Message</label>
+            <textarea id="form-message" placeholder="Hi Apoorva, let's connect..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="send-btn">
+            <i data-lucide="send"></i>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2026 Apoorva Anurag. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="mailto:apoorvagk27@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+        <a href="https://linkedin.com/in/apoorvaanurag" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
